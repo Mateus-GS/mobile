@@ -3,8 +3,6 @@ package br.com.workmed.main.activities;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import br.com.workmed.R;
-import android.app.Activity;
-import android.os.Bundle;
 import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -17,6 +15,10 @@ import java.util.List;
 import br.com.workmed.main.api.ProdutoService;
 import br.com.workmed.main.api.RestServiceGenerator;
 import br.com.workmed.main.entidades.Produto;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import android.content.Intent;
+import android.view.View;
+
 
 
 public class MainActivity extends AppCompatActivity {
@@ -27,8 +29,28 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTitle("Lista de Produtos");
         setContentView(R.layout.activity_main);
         service = RestServiceGenerator.createService(ProdutoService.class);
+        criaAcaoBotaoFlutuante();
+    }
+
+    private void criaAcaoBotaoFlutuante() {
+        FloatingActionButton botaoNovo = findViewById(R.id.floatingActionButton);
+        botaoNovo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.i("MainActivity","Adicionar novo Produto");
+                startActivity(new Intent(MainActivity.this,
+                        FormularioProdutoAcitivity.class));
+
+            }
+        });
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
         buscaProdutos();
     }
 

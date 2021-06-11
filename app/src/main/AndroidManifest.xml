@@ -12,6 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WorkMed"
         android:usesCleartextTraffic="true">
+        <activity android:name=".main.activities.FormularioProdutoAcitivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".main.activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

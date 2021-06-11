@@ -4,7 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".main.activities.MainActivity" >
+    android:layout_alignParentEnd="false"
+    android:layout_alignParentBottom="false"
+    android:clickable="true"
+    android:focusable="auto"
+    tools:context=".main.activities.MainActivity">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:clickable="true"
+        app:srcCompat="@android:drawable/ic_input_add" />
 
     <ListView
         android:id="@+id/listViewListaProduto"

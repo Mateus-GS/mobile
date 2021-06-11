@@ -7,7 +7,7 @@ public class Produto {
 
     private String id;
     private String descricao;
-    private Integer quantidadeEmEstoque;
+    private String quantidadeEmEstoque;
 
     public Produto() {
     }
@@ -28,11 +28,11 @@ public class Produto {
         this.descricao = descricao;
     }
 
-    public Integer getQuantidadeEmEstoque() {
+    public String getQuantidadeEmEstoque() {
         return quantidadeEmEstoque;
     }
 
-    public void setQuantidadeEmEstoque(Integer quantidadeEmEstoque) {
+    public void setQuantidadeEmEstoque(String quantidadeEmEstoque) {
         this.quantidadeEmEstoque = quantidadeEmEstoque;
     }
 
