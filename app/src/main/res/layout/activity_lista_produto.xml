@@ -8,7 +8,7 @@
     android:layout_alignParentBottom="false"
     android:clickable="true"
     android:focusable="auto"
-    tools:context=".main.activities.MainActivity">
+    tools:context=".main.activities.ListaProdutoActivity">
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingActionButton"

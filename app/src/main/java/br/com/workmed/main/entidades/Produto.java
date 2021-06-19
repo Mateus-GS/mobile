@@ -1,9 +1,10 @@
 package br.com.workmed.main.entidades;
 
+import java.io.Serializable;
 import java.util.Objects;
 
 
-public class Produto {
+public class Produto implements Serializable {
 
     private String id;
     private String descricao;
